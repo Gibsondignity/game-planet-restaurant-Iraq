@@ -1,0 +1,35 @@
+{% extends 'index.html' %} 
+{% load static %}
+
+{% block content %}
+
+    <section class="menu" id="menu">
+        <div class="heading">
+            <span>Menu</span>
+
+            {% if description %}
+                <h2>{{ description }}</h2>
+            {% else %}
+                <h2>Tasty menu of the week</h2>
+            {% endif %}
+
+        </div>
+
+        
+        <div class="menu-container">
+            <!-- Box 1 -->
+            {% for menu in menus %}
+            <div class="box">
+                <div class="box-img">
+                    <img src="/media/{{menu.image}}" alt="" >
+                </div>
+                <a href="{% url 'menu' menu.name %}"><button class="btn success">{{ menu.name }}</button></a>
+            </div>
+            {% endfor %}
+        </div>
+        
+
+        
+    </section>
+
+{% endblock %}

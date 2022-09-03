@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/g-planet.jpg' %}" />
+    <title>Game Planet</title>
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!-- Link To CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   
+</head>
+<body>
+    <!-- Navbar -->
+    {% include "navbar.html" %}
+    
+    <!-- Home  Section-->
+    {% include "header.html" %}
+ 
+    <!-- Menu -->
+    
+    {% block content %}
+      
+    {% endblock %}
+
+    
+ 
+    <!-- Contact -->
+    {% include "footer.html" %}
+ 
+    <!-- Link To JS -->
+    {% block script %}
+    {% endblock %}
+
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link To JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+</html>
